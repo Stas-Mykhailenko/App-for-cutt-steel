@@ -2,12 +2,16 @@
 
 function InputWidthSizeCut() {
   return (
-    <form>
-      <label>
-        Ширина лезвия:
-        <input type="number" name="name" />
-      </label>
-    </form>
+    <div class="input-container">
+    <h1 class="input-label">Ширина лезвия:</h1>
+    <input
+      class="input-field"
+      type="number"
+      step="any"
+      placeholder="Размер в мм..."
+      required
+    />
+  </div>
   );
 }
 

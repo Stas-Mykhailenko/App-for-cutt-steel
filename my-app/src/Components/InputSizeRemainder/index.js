@@ -1,12 +1,16 @@
-import '../InputSizeRemainder/style.css'
+
 function InputSizeRemainder (){
 	return (
-<form className ="form">
-<label>
-  Минимальный остаток при порезке мм:
-  <input className="input" type="number" name="name" />
-</label>
-</form>
+<div class="input-container">
+      <h1 class="input-label">Размер остатка:</h1>
+      <input
+        class="input-field"
+        type="number"
+        step="any"
+        placeholder="Размер в мм..."
+        required
+      />
+    </div>
 	)
 }
 

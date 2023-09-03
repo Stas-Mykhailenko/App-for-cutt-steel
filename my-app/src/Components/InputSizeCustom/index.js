@@ -1,9 +1,9 @@
 function InputSizeCustom (){
 	return (
-<div class="input-container">
-      <h1 class="input-label">Введите размер заготовки по умолчанию:</h1>
+<div className="input-container">
+      <h1 className="input-label">Введите размер заготовки по умолчанию:</h1>
       <input
-        class="input-field"
+        className="input-field"
         type="number"
         step="any"
         placeholder="Размер в мм..."

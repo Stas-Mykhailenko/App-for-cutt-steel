@@ -1,23 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
+
+import InputWidthSizeCut from "../InputWidthSizeCut";
+import InputSizeRemainder from "../InputSizeRemainder";
+import InputSizeCustom from "../InputSizeCustom";
+import NameInput from "../NameInput";
+import DownloadExelSizeButton from "../DownloadExelSizeButton";
+import DownloadSizeForCutingButton from "../DownloadSizeForCutingButton";
+import ShowResultButton from "../ShowResultButton";
+import UploadExelButton from "../UploadExelButton";
+import UploadExelSizeButton from "../UploadExelSizeButton";
+import WindowResult from "../WindowResult";
 
 import "../CutCalculator/style.css";
-import InputWidthSizeCut from "../InputWidthSizeCut/index.js";
-import InputSizeCustom from "../InputSizeCustom/index.js";
-import InputSizeRemainder from "../InputSizeRemainder/index.js";
-import NameInput from "../NameInput/index.js";
-import DownloadExelSizeButton from "../DownloadExelSizeButton/index.js";
-import DownloadSizeForCutingButton from "../DownloadSizeForCutingButton/index.js";
-import ShowResultButton from "../ShowResultButton/index.js";
-import UploadExelButton from "../UploadExelButton/index.js";
-import UploadExelSizeButton from "../UploadExelSizeButton/index.js";
-import WindowResult from "../WindowResult/index.js";
+
 function CutCalculator() {
+  const [message, setMessage] = useState("");
+
   return (
     <div>
       <h1 className="body_titel">Раскрой порезки металла</h1>
       <div className="box">
         <div className="box_input">
-          <NameInput />
+          <NameInput message={message} setMessage={setMessage} />
           <InputSizeCustom />
           <InputWidthSizeCut />
           <InputSizeRemainder />

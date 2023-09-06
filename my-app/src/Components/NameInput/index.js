@@ -1,28 +1,16 @@
-// import { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-
-import { getValue, increment } from "../../features/counter/counterSlice";
-
-function NameInput({ message, setMessage }) {
-  // const [message, setMessage] = useState("");
-  const dispatch = useDispatch();
-  const f = useSelector(getValue);
+function NameInput({ nameInputValue, setNameInputValue }) {
   const handleChange = (event) => {
-    setMessage(event.target.value);
+    setNameInputValue(event.target.value);
   };
-
-  console.log("value is:", message);
-  const onBlur = () => dispatch(increment(message));
 
   return (
     <div className="input-container">
-      <h1 className="input-label">Наименование профиля:{f}</h1>
+      <h1 className="input-label">Наименование профиля:</h1>
       <input
         required
         step="any"
         type="text"
-        onBlur={onBlur}
-        value={message}
+        value={nameInputValue}
         onChange={handleChange}
         className="input-field"
         placeholder="Введите название профиля..."

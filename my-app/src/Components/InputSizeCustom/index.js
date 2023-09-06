@@ -1,16 +1,25 @@
-function InputSizeCustom (){
-	return (
-<div className="input-container">
-      <h1 className="input-label">Введите размер заготовки по умолчанию:</h1>
+function InputSizeCustom({ InputSizeCustomValue, setInputSizeCustomValue }) {
+  const handleChange = (event) => {
+    setInputSizeCustomValue(event.target.value);
+  };
+  console.log("value is:", InputSizeCustomValue);
+
+  return (
+    <div className="input-container">
+      <h1 className="input-label">
+        Введите размер заготовки в мм по умолчанию:
+      </h1>
       <input
-        className="input-field"
-        type="number"
-        step="any"
-        placeholder="Размер в мм..."
         required
+        step="any"
+        type="number"
+        onChange={handleChange}
+        className="input-field"
+        placeholder="Размер в мм..."
+        value={InputSizeCustomValue}
       />
     </div>
-	)
+  );
 }
 
-export default InputSizeCustom
+export default InputSizeCustom;

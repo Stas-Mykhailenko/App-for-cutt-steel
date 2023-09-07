@@ -19,4 +19,4 @@ function NameInput({ nameInputValue, setNameInputValue }) {
   );
 }
 
-export default NameInput;
+export { NameInput };

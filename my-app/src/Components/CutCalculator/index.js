@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 
-import NameInput from "../NameInput";
+import { NameInput } from "../NameInput";
 import WindowResult from "../WindowResult";
 import InputSizeCustom from "../InputSizeCustom";
 import ShowResultButton from "../ShowResultButton";
@@ -21,6 +21,7 @@ function CutCalculator() {
   const [InputSizeRemainderValue, setInputSizeRemainderValue] = useState("");
 
   const hiddenFileInput = useRef(null);
+
   return (
     <div>
       <h1 className="body_titel">Раскрой порезки металла</h1>
@@ -43,6 +44,7 @@ function CutCalculator() {
             setInputWidthSizeCutValue={setInputWidthSizeCutValue}
           />
         </div>
+
         <div className="box_button">
           <DownloadExelSizeButton />
           <DownloadSizeForCutingButton
@@ -54,6 +56,7 @@ function CutCalculator() {
           <UploadExelSizeButton />
           <ShowResultButton />
         </div>
+
         <div className="box_result">
           <h2 className="result_title"> Эфективность раскроя металла</h2>
           <WindowResult />

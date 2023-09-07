@@ -22,7 +22,7 @@ function DownloadSizeForCutingButton({
     reader.readAsBinaryString(f);
   };
   console.log(isValueExelForCuting);
-  const handleClick = (event) => {
+  const handleClick = () => {
     hiddenFileInput.current.click();
   };
 

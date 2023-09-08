@@ -1,10 +1,12 @@
 import * as XLSX from "xlsx";
+import React, { useRef } from "react";
 
 function DownloadSizeForCutingButton({
-  hiddenFileInput,
   isValueExelForCuting,
   setIsValueExelForCuting,
 }) {
+  const hiddenFileInput = useRef(null);
+
   const handleChange = (e) => {
     e.preventDefault();
 
@@ -30,14 +32,14 @@ function DownloadSizeForCutingButton({
     <div>
       <input
         type="file"
-        onChange={handleChange} // ADDED
         ref={hiddenFileInput}
+        onChange={handleChange}
         style={{ display: "none" }}
       />
       <input
-        className="submit-button btn-film"
-        onClick={handleClick}
         type="button"
+        onClick={handleClick}
+        className="submit-button btn-film"
         value="Загрузить список отрезков Exel"
       />
     </div>

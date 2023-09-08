@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 
 import { NameInput } from "../NameInput";
 import WindowResult from "../WindowResult";
@@ -19,8 +19,7 @@ function CutCalculator() {
   const [InputSizeCustomValue, setInputSizeCustomValue] = useState("");
   const [InputWidthSizeCutValue, setInputWidthSizeCutValue] = useState("");
   const [InputSizeRemainderValue, setInputSizeRemainderValue] = useState("");
-
-  const hiddenFileInput = useRef(null);
+  const [isValueExelSize, setisValueExelSize] = useState("");
 
   return (
     <div>
@@ -46,9 +45,11 @@ function CutCalculator() {
         </div>
 
         <div className="box_button">
-          <DownloadExelSizeButton />
+          <DownloadExelSizeButton
+            isValueExelSize={isValueExelSize}
+            setIsValueExelSize={setisValueExelSize}
+          />
           <DownloadSizeForCutingButton
-            hiddenFileInput={hiddenFileInput}
             isValueExelForCuting={isValueExelForCuting}
             setIsValueExelForCuting={setIsValueExelForCuting}
           />

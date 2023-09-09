@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import { NameInput } from "../NameInput";
+import { Counter } from "../Counter";
 import WindowResult from "../WindowResult";
 import InputSizeCustom from "../InputSizeCustom";
 import ShowResultButton from "../ShowResultButton";
@@ -20,6 +21,18 @@ function CutCalculator() {
   const [InputWidthSizeCutValue, setInputWidthSizeCutValue] = useState("");
   const [InputSizeRemainderValue, setInputSizeRemainderValue] = useState("");
   const [isValueExelSize, setisValueExelSize] = useState("");
+
+  const dataImport = [
+    ["Наименование", "количество", "размер"],
+    ["60x40", 2, 300],
+    ["60x40", 2, 300],
+    ["60x40", 1, 3200],
+    ["60x40", 1, 5000],
+  ];
+  console.log(dataImport[2][2]);
+  // const mokoValueCustomSize = 6000;
+  // const mokoValueWitdSize = 3;
+  // const mokoValueRemainderSize = 800;
 
   return (
     <div>
@@ -62,6 +75,7 @@ function CutCalculator() {
           <h2 className="result_title"> Эфективность раскроя металла</h2>
           <WindowResult />
         </div>
+        <Counter dataImport={dataImport} />
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 // import ReactExport from "react-data-export";
 
 // const ExcelFile = ReactExport.ExcelFile;
@@ -35,15 +35,7 @@ function UploadExelButton() {
 
   return (
     <div>
-      {/* <ExcelFile
-        element={
-          <input
-            className="submit-button btn-film"
-            type="button"
-            value="Скачать раскрой порезки металла Exel"
-          />
-        }
-      >
+      {/* <ExcelFile element={<button>Download Data</button>}>
         <ExcelSheet data={dataSet1} name="Employees">
           <ExcelColumn nameFirstColum="Name" value="name" />
           <ExcelColumn label="Wallet Money" value="amount" />

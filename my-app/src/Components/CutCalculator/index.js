@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { NameInput } from "../NameInput";
-import { Counter } from "../Counter";
+import { Counter } from "../Counter/Counter";
 import WindowResult from "../WindowResult";
 import InputSizeCustom from "../InputSizeCustom";
 import ShowResultButton from "../ShowResultButton";
@@ -28,11 +28,9 @@ function CutCalculator() {
     ["60x40", 2, 300],
     ["60x40", 1, 3200],
     ["60x40", 1, 5000],
+    ["60x40", 1, 3200],
+    ["60x40", 1, 5000],
   ];
-  console.log(dataImport[2][2]);
-  // const mokoValueCustomSize = 6000;
-  // const mokoValueWitdSize = 3;
-  // const mokoValueRemainderSize = 800;
 
   return (
     <div>

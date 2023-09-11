@@ -8,7 +8,7 @@ function WindowResult() {
         Процент эфективности = <span> 15%</span>
       </p>
       <p>
-        Обший метраж =<span> 15% м.</span>
+        Обший метраж =<span> 15 м.</span>
       </p>
     </div>
   );
